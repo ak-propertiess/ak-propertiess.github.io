@@ -123,3 +123,19 @@ footer{background:#f4f0e7;border-top:1px solid #ded7c9}.admin-launch{background:
 @keyframes banner-city-loop{0%{scale:.985 1;translate:0 1px;filter:brightness(.96)}100%{scale:1.015 1.045;translate:0 -2px;filter:brightness(1.04)}}
 @media(max-width:700px){.banner-skyline{height:28%;bottom:7%}.skyline-tower-one{left:15%;width:6%;height:35%}.skyline-tower-two{left:21.5%;width:4%;height:45%}.skyline-tower-three{right:21.5%;width:4%;height:43%}.skyline-tower-four{right:15%;width:6%;height:34%}.skyline-tower-five{left:8%;width:5%;height:26%}.property-details-modal{grid-template-columns:1fr;max-height:92vh;overflow-y:auto}.property-details-visual{min-height:0;height:250px}.property-details-content{padding:26px 24px 30px;overflow:visible}.details-close{position:absolute;top:12px;right:12px}}
 @media(prefers-reduced-motion:reduce){.banner-skyline,.skyline-tower{animation:none!important;filter:none!important}.view-more,.view-more span{transition:none!important}.property-details-modal{animation:none!important}}
+
+/* Instagram previews are an additional social section; the existing site copy and listings stay intact. */
+.instagram-section{position:relative;overflow:hidden;background:linear-gradient(145deg,#f4f1e8,#ebe8de);}
+.instagram-section::before{content:"";position:absolute;right:-8%;top:8%;width:min(36vw,430px);aspect-ratio:1;border:1px solid #b59c6750;border-radius:50%;box-shadow:0 0 0 24px #b59c6710,0 0 0 50px #b59c670a;pointer-events:none}
+.instagram-section .section-head,.instagram-grid{position:relative;z-index:1}
+.instagram-section .section-head h2{color:#24342a}.instagram-section .section-head h2 em{color:#8b7044}
+.instagram-follow{white-space:nowrap}
+.instagram-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;align-items:start}
+.instagram-card{min-width:0;overflow:hidden;padding:10px;border:1px solid #d8d0bd;background:#fbfaf6;box-shadow:0 12px 28px #24342a12;transition:transform .45s var(--motion-ease),box-shadow .45s,border-color .35s;transform-style:preserve-3d}
+.instagram-card:hover{transform:translateY(-6px) rotateX(.5deg);border-color:#b89a61;box-shadow:0 22px 42px #24342a20}
+.instagram-card blockquote.instagram-media{width:100%!important;min-width:0!important;max-width:100%!important;margin:0 auto!important;background:#fff;border:0!important;box-shadow:none!important}
+.instagram-card blockquote.instagram-media a{display:block;padding:18px;color:#49624d;font-size:13px;text-decoration:none}
+.instagram-card iframe{max-width:100%!important}
+@media(max-width:900px){.instagram-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}}
+@media(max-width:600px){.instagram-grid{grid-template-columns:minmax(0,1fr)}.instagram-section .section-head{align-items:flex-start;gap:14px;flex-direction:column}.instagram-section .instagram-follow{margin-top:0}.instagram-card{max-width:420px;width:100%;margin:0 auto}.instagram-section::before{width:70vw;right:-24%;top:14%}}
+@media(hover:none),(prefers-reduced-motion:reduce){.instagram-card:hover{transform:none}}
