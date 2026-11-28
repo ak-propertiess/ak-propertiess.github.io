@@ -144,3 +144,64 @@ footer{background:#f4f0e7;border-top:1px solid #ded7c9}.admin-launch{background:
 @media(max-width:900px){.instagram-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}}
 @media(max-width:600px){.instagram-grid{grid-template-columns:minmax(0,1fr)}.instagram-section .section-head{align-items:flex-start;gap:14px;flex-direction:column}.instagram-section .instagram-follow{margin-top:0}.instagram-card{max-width:420px;width:100%;margin:0 auto}.instagram-section::before{width:70vw;right:-24%;top:14%}}
 @media(hover:none),(prefers-reduced-motion:reduce){.instagram-card:hover{transform:none}}
+
+/* The new rendered loop replaces only the old banner artwork while playing. */
+.brand-banner{position:relative}
+.brand-banner>.banner-poster{position:absolute;inset:0;z-index:0;width:100%;height:100%;object-fit:cover;object-position:center 48%;opacity:1;transition:opacity .75s var(--motion-ease)}
+.brand-banner>.banner-video{position:absolute;inset:0;z-index:0;display:block;width:100%;height:100%;object-fit:cover;object-position:center 68%;opacity:0;transition:opacity .85s var(--motion-ease)}
+.brand-banner.video-ready>.banner-poster{opacity:0}
+.brand-banner.video-ready>.banner-video{opacity:1}
+.brand-banner.video-ready .banner-living-models{opacity:0;visibility:hidden;transition:opacity .6s ease,visibility .6s}
+.banner-video-brand{position:absolute;z-index:3;left:50%;top:50%;translate:-50% -50%;display:block;width:min(31vw,400px);padding:7px;border:1px solid #c3a66e;background:rgba(247,244,235,.92);box-shadow:0 12px 42px #17231c47,0 0 28px #fff5;opacity:0;visibility:hidden;transition:opacity .75s var(--motion-ease),visibility .75s}
+.brand-banner.video-ready .banner-video-brand{opacity:1;visibility:visible}
+.banner-video-logo{display:block;width:100%!important;height:auto!important;object-fit:contain!important;object-position:center!important}
+.banner-video-brand:focus-visible{outline:3px solid #fff;outline-offset:5px}
+@media(max-width:650px){.brand-banner>.banner-video{object-position:center 70%}.banner-video-brand{width:min(72vw,270px);padding:5px}}
+@media(prefers-reduced-motion:reduce){.brand-banner>.banner-poster,.brand-banner>.banner-video,.banner-video-brand{transition:none!important}}
+
+/* Clear service path, a compact Delhi area guide, and an easy first enquiry. */
+.how-help{background:#eeece5}
+.how-help .section-head{align-items:end}
+.how-help .section-head h2,.guide-copy h2{color:#24342a}
+.how-help .section-head h2 em,.guide-copy h2 em,.enquiry-card h2 em{color:#9a784e}
+.help-intro{max-width:360px;margin:0;color:#73786f;font-size:13px;line-height:1.8}
+.help-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:42px}
+.help-card{position:relative;min-height:255px;padding:27px 27px 25px;border:1px solid #dcd8ce;background:#f8f6f0;transition:transform .35s var(--motion-ease),box-shadow .35s,border-color .35s}
+.help-card:hover{transform:translateY(-5px);border-color:#bda575;box-shadow:0 18px 38px #24342a13}
+.help-number{position:absolute;top:23px;right:24px;color:#a49679;font:11px var(--display);letter-spacing:1px}
+.help-icon{display:grid;place-items:center;width:42px;height:42px;border:1px solid #c8b991;border-radius:50%;color:#8c7045;font:22px var(--serif)}
+.help-card h3{margin:23px 0 10px;color:#29372e;font:500 20px var(--display);letter-spacing:-.5px}
+.help-card p{min-height:66px;margin:0;color:#757970;font-size:12px;line-height:1.8}
+.help-card>a,.area-card>a{display:inline-flex;align-items:center;gap:12px;margin-top:19px;color:#526754;font-size:10px;font-weight:700;letter-spacing:.35px}
+.help-card>a span,.area-card>a span{transition:transform .25s}
+.help-card>a:hover span,.area-card>a:hover span{transform:translate(3px,-2px)}
+.guide-enquiry{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(300px,.75fr);gap:clamp(30px,5vw,76px);align-items:start;background:#f7f5f0}
+.guide-copy h2{margin:17px 0 13px;font:500 clamp(38px,4.2vw,56px)/1.08 var(--display);letter-spacing:-2.8px}
+.guide-intro{max-width:620px;color:#747970;font-size:13px;line-height:1.85}
+.area-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;margin-top:27px}
+.area-card{min-height:160px;padding:20px;border:1px solid #dfdbd1;background:#fbfaf6;transition:transform .3s var(--motion-ease),border-color .3s,box-shadow .3s}
+.area-card:hover{transform:translateY(-3px);border-color:#baa372;box-shadow:0 12px 26px #24342a10}
+.area-card>span{color:#8c7958;font-size:8px;font-weight:700;letter-spacing:1.25px}
+.area-card h3{margin:12px 0 7px;color:#2c3b31;font:500 15px var(--display)}
+.area-card p{margin:0;color:#777b73;font-size:10px;line-height:1.7}
+.area-card>a{margin-top:11px;font-size:9px}
+.enquiry-card{scroll-margin-top:100px;padding:30px 28px;background:#eae7dd;border:1px solid #ded9cc;box-shadow:0 18px 44px #24342a0c}
+.enquiry-card h2{margin:13px 0 10px;color:#29372e;font:500 clamp(30px,3vw,40px)/1.12 var(--display);letter-spacing:-1.8px}
+.enquiry-card>p{margin:0;color:#747970;font-size:11px;line-height:1.75}
+.enquiry-form{display:grid;gap:12px;margin-top:19px}
+.enquiry-form label{display:grid;gap:6px;color:#5e655c;font-size:9px;font-weight:600}
+.enquiry-form input,.enquiry-form select,.enquiry-form textarea{width:100%;min-width:0;border:1px solid #d5d1c7;border-radius:0;background:#fbfaf6;padding:10px 11px;color:#29372e;font-size:11px;outline:none}
+.enquiry-form input:focus,.enquiry-form select:focus,.enquiry-form textarea:focus{border-color:#7c8979;box-shadow:0 0 0 2px #7c89791c}
+.enquiry-form textarea{resize:vertical;line-height:1.6}
+.enquiry-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.optional-label{display:inline;color:#8d9087;font-size:8px;font-weight:400}
+.enquiry-form .button{width:100%;margin-top:2px}
+.enquiry-status{min-height:0;margin:0;color:#526754;font-size:10px;line-height:1.6}
+.enquiry-status:empty{display:none}
+.enquiry-status[data-error="true"]{color:#985d4f}
+.topbar nav{gap:clamp(14px,2vw,30px)}
+@media(max-width:900px){.help-grid{gap:12px}.help-card{padding:23px 20px}.guide-enquiry{grid-template-columns:minmax(0,1fr) minmax(270px,.8fr);gap:25px}.area-card{padding:16px}.topbar nav{gap:14px;font-size:10px}}
+@media(max-width:700px){.help-grid{grid-template-columns:1fr;gap:12px;margin-top:28px}.help-card{min-height:0;padding:22px}.help-card p{min-height:0}.help-card h3{margin:17px 0 8px}.guide-enquiry{grid-template-columns:1fr;gap:30px}.area-grid{gap:10px;margin-top:20px}.area-card{min-height:0;padding:15px}.enquiry-card{padding:25px 21px}.guide-copy h2{font-size:42px}.help-intro{margin-top:14px}}
+@media(max-width:380px){.area-grid{grid-template-columns:1fr}.enquiry-row{grid-template-columns:1fr}}
+@media(hover:none),(prefers-reduced-motion:reduce){.help-card:hover,.area-card:hover{transform:none;box-shadow:none}}
+
